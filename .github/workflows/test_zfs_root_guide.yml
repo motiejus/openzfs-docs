@@ -1,8 +1,11 @@
 name: "Test installation guides"
 on:
+  schedule:
+    - cron: "0 16 * * *"
   push:
     branches:
       - master
+      - dev
     paths:
       - 'docs/Getting Started/NixOS/Root on ZFS.rst'
       - 'docs/Getting Started/RHEL-based distro/Root on ZFS.rst'
