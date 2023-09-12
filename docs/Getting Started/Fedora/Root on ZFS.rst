@@ -582,6 +582,7 @@ System Configuration
    ::
 
     rm -f /etc/localtime
+    rm -f /etc/hostname
     systemd-firstboot \
     --force \
     --locale=en_US.UTF-8 \
