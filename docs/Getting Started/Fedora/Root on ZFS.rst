@@ -588,7 +588,7 @@ System Configuration
     --locale=en_US.UTF-8 \
     --timezone=Etc/UTC \
     --hostname=testhost \
-    --keymap=us
+    --keymap=us || true
 
 #. Set root passwd
    ::
