@@ -302,13 +302,14 @@ System Installation
       zfs create -o mountpoint=legacy rpool/nixos/home
       mkdir "${MNT}"/home
       mount -t zfs rpool/nixos/home "${MNT}"/home
-      zfs create -o mountpoint=legacy  rpool/nixos/var
+      zfs create -o mountpoint=legacy rpool/nixos/var
       zfs create -o mountpoint=legacy rpool/nixos/var/lib
       zfs create -o mountpoint=legacy rpool/nixos/var/log
       zfs create -o mountpoint=none bpool/nixos
       zfs create -o mountpoint=legacy bpool/nixos/root
       mkdir "${MNT}"/boot
       mount -t zfs bpool/nixos/root "${MNT}"/boot
+      mount -t zfs rpool/nixos/var "${MNT}"/var
       mkdir -p "${MNT}"/var/log
       mkdir -p "${MNT}"/var/lib
       mount -t zfs rpool/nixos/var/lib "${MNT}"/var/lib
